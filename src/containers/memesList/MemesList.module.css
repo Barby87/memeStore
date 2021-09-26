@@ -1,0 +1,13 @@
+.card_wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem!important;
+}
+
+.list_container {
+    margin-left: 2rem;
+}
+
+.title {
+    margin: 3rem 0;
+}

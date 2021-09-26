@@ -8,12 +8,9 @@ import {
     CREATE_MEME_START, 
     CREATE_MEME_SUCCESS, 
     CREATE_MEME_FAILURE, 
-    UPDATE_MEME_START, 
-    UPDATE_MEME_SUCCESS, 
-    UPDATE_MEME_FAILURE, 
 } from "./constants";
 
-import { store } from "../index";
+import store from "../index";
 
 // Acciones asíncronas
 // Fetch
@@ -21,7 +18,7 @@ export const fetchMemesStart = () => ({
     type: FETCH_MEMES_START
 })
 
-export const fetchMemesuccess = (memes) => ({
+export const fetchMemesSuccess = (memes) => ({
     type: FETCH_MEMES_SUCCESS,
     payload: memes
 })
@@ -61,28 +58,4 @@ export const createMemeFailure = (errorMessage) => ({
     payload: errorMessage
 })
 
-// Update
-export const updateMemeStart = () => ({
-    type: UPDATE_MEME_START,
-})
 
-export const updateMemeSuccess = (memex) => {
-    // type: UPDATE_MEME_SUCCESS,
-    // payload: meme
-    const {memes: mems} = store.getState();
-    // Accediendo a initialState.data
-    const memes = mems.data;
-    // Buscando el index del meme (memex) que se va a actualizar
-    const idEdit = memes.findIndex((meme) => meme.id === memex.id);
-    memes[idEdit] = memex;
-    return ({
-        // Retornando un objeto plano
-        type: UPDATE_MEME_SUCCESS,
-        payload: memes
-    }) 
-}
-
-export const updateMemeFailure = (errorMessage) => ({
-    type: UPDATE_MEME_FAILURE,
-    payload: errorMessage
-})
