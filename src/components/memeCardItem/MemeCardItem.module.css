@@ -1,0 +1,10 @@
+.card_wrapper {
+    display: flex!important;
+    justify-content: center;
+    margin-bottom: 4rem!important;
+    margin: 0 auto;
+}
+
+.image {
+    max-height: 500px;
+}

@@ -5,7 +5,7 @@ import { fetchMemesStartThunk } from '../../store/memes/thunks';
 import { Alert, Button, Col, Row } from 'antd';
 import styles from './MemesList.module.css';
 import LoadingSpinner from '../../components/loadingSpinner/LoadingSpinner';
-import MemeCardCreate from '../../components/memeCardCreate/MemeCardCreate';
+import MemeCardItem from '../../components/memeCardItem/MemeCardItem';
 
 const MemesList = () => {
     const memes = useSelector(memesSelector);
@@ -37,7 +37,7 @@ const MemesList = () => {
                     className={styles.list_container} 
                 > 
                     {memes?.slice(0, memeLimit).map((meme) => (
-                            <MemeCardCreate
+                            <MemeCardItem
                                 key={meme?.id}
                                 alt={meme?.name}
                                 src={meme?.url}
