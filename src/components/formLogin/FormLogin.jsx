@@ -1,13 +1,11 @@
 import React from 'react';
 import { Button, Form, Input } from 'antd';
-
-// import styles from './FormUser.module.css';
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
 
 const FormLogin = ({
     onFinish, 
     onFinishFailed,
     handleChangeForm, 
-    onChangeInput, 
     valueEmail, 
     valuePassword,
     initialValues
@@ -15,7 +13,7 @@ const FormLogin = ({
 }) => {
     const [form] = Form.useForm();
     const layout = {
-        labelCol: { span: 8 },
+        labelCol: { span: 12 },
         wrapperCol: { span: 16 },
     };
 
@@ -25,7 +23,7 @@ const FormLogin = ({
             password: valuePassword
            
         });
-      }, [form, valueEmail, valuePassword]);
+    }, [form, valueEmail, valuePassword]);
 
     return (
         <div>
@@ -41,17 +39,15 @@ const FormLogin = ({
             >
                 <Form.Item 
                     name="username"
-                    onChange={onChangeInput}
                     label="Nombre de usuario" 
                     rules={[{ required: true, message:"Porfavor, ingresa tu e-mail" }]}>
-                        <Input type="text" />
+                        <Input type="text" prefix={<UserOutlined className="site-form-item-icon" />}/>
                 </Form.Item>
                 <Form.Item 
                     name="password"
-                    onChange={onChangeInput} 
                     label="Contraseña" 
                     rules={[{ required: true }]}>
-                        <Input.Password />
+                        <Input.Password prefix={<LockOutlined className="site-form-item-icon" />}/>
                 </Form.Item>
                
                 <Form.Item wrapperCol={{ offset: 8, span: 16 }}>

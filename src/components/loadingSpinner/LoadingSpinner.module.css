@@ -1,0 +1,8 @@
+.spinner_container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--global-color-white-simple);
+    margin-top: 20rem;
+  }

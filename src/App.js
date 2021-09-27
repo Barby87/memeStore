@@ -18,9 +18,12 @@ function App() {
           <Route path="/" exact>
             <Login/>
           </Route>
-          <PrivateRoute path="/memes-list" isLogin={isLogin} component={MemesList} />
-          <PrivateRoute path="/meme/remove/:id" isLogin={isLogin} component={MemeDelete}/>
+          <Route path="/memes-list" exact>
+            <MemesList/>
+          </Route>
+          {/* <PrivateRoute path="/memes-list" isLogin={isLogin} component={MemesList} /> */}
           <PrivateRoute path="/meme/create" isLogin={isLogin} component={MemeCreate}/>
+          <PrivateRoute path="/meme/remove/:id" isLogin={isLogin} component={MemeDelete}/>
         </Switch>
       </Router>
     </div>

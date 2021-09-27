@@ -10,7 +10,7 @@ import {
     CREATE_MEME_FAILURE, 
 } from "./constants";
 
-import store from "../index";
+// import store from "../index";
 
 // Acciones asíncronas
 // Fetch
