@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/memeStore.git/static/css/main.667f3ef5.chunk.css",
-    "main.js": "/memeStore.git/static/js/main.f96f23bb.chunk.js",
-    "main.js.map": "/memeStore.git/static/js/main.f96f23bb.chunk.js.map",
-    "runtime-main.js": "/memeStore.git/static/js/runtime-main.b0484b3e.js",
-    "runtime-main.js.map": "/memeStore.git/static/js/runtime-main.b0484b3e.js.map",
-    "static/css/2.786ae0dd.chunk.css": "/memeStore.git/static/css/2.786ae0dd.chunk.css",
-    "static/js/2.93a2040d.chunk.js": "/memeStore.git/static/js/2.93a2040d.chunk.js",
-    "static/js/2.93a2040d.chunk.js.map": "/memeStore.git/static/js/2.93a2040d.chunk.js.map",
-    "static/js/3.20225c7f.chunk.js": "/memeStore.git/static/js/3.20225c7f.chunk.js",
-    "static/js/3.20225c7f.chunk.js.map": "/memeStore.git/static/js/3.20225c7f.chunk.js.map",
-    "index.html": "/memeStore.git/index.html",
-    "static/css/2.786ae0dd.chunk.css.map": "/memeStore.git/static/css/2.786ae0dd.chunk.css.map",
-    "static/css/main.667f3ef5.chunk.css.map": "/memeStore.git/static/css/main.667f3ef5.chunk.css.map",
-    "static/js/2.93a2040d.chunk.js.LICENSE.txt": "/memeStore.git/static/js/2.93a2040d.chunk.js.LICENSE.txt"
+    "main.css": "/memeStore/static/css/main.667f3ef5.chunk.css",
+    "main.js": "/memeStore/static/js/main.f96f23bb.chunk.js",
+    "main.js.map": "/memeStore/static/js/main.f96f23bb.chunk.js.map",
+    "runtime-main.js": "/memeStore/static/js/runtime-main.237308de.js",
+    "runtime-main.js.map": "/memeStore/static/js/runtime-main.237308de.js.map",
+    "static/css/2.786ae0dd.chunk.css": "/memeStore/static/css/2.786ae0dd.chunk.css",
+    "static/js/2.5872e69c.chunk.js": "/memeStore/static/js/2.5872e69c.chunk.js",
+    "static/js/2.5872e69c.chunk.js.map": "/memeStore/static/js/2.5872e69c.chunk.js.map",
+    "static/js/3.20225c7f.chunk.js": "/memeStore/static/js/3.20225c7f.chunk.js",
+    "static/js/3.20225c7f.chunk.js.map": "/memeStore/static/js/3.20225c7f.chunk.js.map",
+    "index.html": "/memeStore/index.html",
+    "static/css/2.786ae0dd.chunk.css.map": "/memeStore/static/css/2.786ae0dd.chunk.css.map",
+    "static/css/main.667f3ef5.chunk.css.map": "/memeStore/static/css/main.667f3ef5.chunk.css.map",
+    "static/js/2.5872e69c.chunk.js.LICENSE.txt": "/memeStore/static/js/2.5872e69c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b0484b3e.js",
+    "static/js/runtime-main.237308de.js",
     "static/css/2.786ae0dd.chunk.css",
-    "static/js/2.93a2040d.chunk.js",
+    "static/js/2.5872e69c.chunk.js",
     "static/css/main.667f3ef5.chunk.css",
     "static/js/main.f96f23bb.chunk.js"
   ]
