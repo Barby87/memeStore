@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Col } from 'antd';
-import { EditOutlined, DeleteOutlined } from '@ant-design/icons';
+import { EditOutlined } from '@ant-design/icons';
 import styles from './MemeCardCreate.module.css';
 const { Meta } = Card;
 
@@ -18,7 +18,7 @@ const MemeCardCreate = ({ alt, description, src, title, onClickCreate, onClickDe
                 }
                 actions={[
                     <EditOutlined key="create" onClick={onClickCreate} />,
-                    <DeleteOutlined key="delete" onClick={onClickDelete} />,
+                    // <DeleteOutlined key="delete" onClick={onClickDelete} />,
                 ]}
             >
                 <Meta

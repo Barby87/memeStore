@@ -10,6 +10,8 @@ import {
     fetchMemesSuccess, 
 } from "./actions";
 
+import { username, password } from "./secrets";
+
 // Fetch
 export const fetchMemesStartThunk = () => {
     return async (dispatch, getState) => {
@@ -44,12 +46,13 @@ export const fetchMemesStartThunk = () => {
 // }
 
 // Create
-export const createMemeStartThunk = (params, meme) => {
+export const createMemeStartThunk = (params, cb) => {
     return async (dispatch) => {
         dispatch(createMemeStart());
         try {
-            params["password"] = "E$XNPeA!u8Cd$cw";
-            params["username"]= "BrbaraCceres";
+            params["password"] = password;
+            params["username"]= username;
+            // const params = {username: username, password: password};
             const bodyParams = Object.keys(params)
             .map((key) => {
               return encodeURIComponent(key) + "=" + encodeURIComponent(params[key]);
@@ -63,8 +66,11 @@ export const createMemeStartThunk = (params, meme) => {
                 }
             })
             const data = await response.json();
-            console.log('data', data)
-            dispatch(createMemeSuccess(meme));
+            console.log('data', data);
+            const url = data.data.url;
+            params.url = url;
+            dispatch(createMemeSuccess(params));
+            cb();
         } catch (error) {
             dispatch(createMemeFailure(error.message));
         }

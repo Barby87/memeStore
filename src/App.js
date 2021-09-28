@@ -6,6 +6,7 @@ import Login from './containers/login/Login';
 import MemeCreate from './containers/memeCreate/MemeCreate';
 import MemeDelete from './containers/memeDelete/MemeDelete';
 import MemesList from './containers/memesList/MemesList';
+import MyList from './containers/myList/MyList';
 import NavBar from './containers/navBar/NavBar';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <MemesList/>
           </Route>
           {/* <PrivateRoute path="/memes-list" isLogin={isLogin} component={MemesList} /> */}
+          <PrivateRoute path="/my-list" isLogin={isLogin} component={MyList}/>
           <PrivateRoute path="/meme/create" isLogin={isLogin} component={MemeCreate}/>
           <PrivateRoute path="/meme/remove/:id" isLogin={isLogin} component={MemeDelete}/>
         </Switch>

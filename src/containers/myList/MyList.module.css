@@ -1,0 +1,20 @@
+.container {
+    padding-bottom: 4rem;
+}
+
+.link {
+    width: -webkit-fill-available;
+}
+
+.list_container {
+    margin-top: 3rem;
+}
+
+.text {
+    text-align: center;
+}
+
+.title {
+    margin: 3rem 0;
+    text-align: center;
+}

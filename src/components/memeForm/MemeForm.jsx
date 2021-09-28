@@ -27,12 +27,14 @@ const MemeForm = ({
             <Form.Item 
                 name="text0" 
                 label="Texto 1"
+                rules={[{ required: true, message:"Campo obligatorio" }]}
             >
                 <Input />
             </Form.Item>
             <Form.Item 
                 name="text1" 
                 label="Texto 2"
+                rules={[{ required: true, message:"Campo obligatorio" }]}
             >
                 <Input />
             </Form.Item>

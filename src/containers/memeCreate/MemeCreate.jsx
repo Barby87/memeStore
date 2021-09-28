@@ -8,30 +8,43 @@ import MemeCardCreate from '../../components/memeCardCreate/MemeCardCreate';
 import MemeForm from '../../components/memeForm/MemeForm';
 import useFormUsers from '../../hooks/useFormUsers';
 import LoadingSpinner from '../../components/loadingSpinner/LoadingSpinner';
+import { useHistory } from 'react-router';
 
 const MemeCreate = () => {
     const memes = useSelector(memesSelector);
     const { isLoading } = useSelector((state) => state.memes);
     const dispatch = useDispatch();
-    const { formValues, handleChange } = useFormUsers({
+    const { formValues, handleChange, setFormValues } = useFormUsers({
         text0: '',
         text1: '',
       });
-      const [memeLimit, setMemeLimit] = useState(10);
+    const [memeLimit, setMemeLimit] = useState(10);
+    const history = useHistory();
 
     useEffect(() => {
         if(isLoading === 'iddle') 
             dispatch(fetchMemesStartThunk());
     }, [isLoading, dispatch]);
 
-    const hanldeCreateMeme = (id) => {
-        // Se pone como argumento un callback con el history.push para que espere la respuesta de la api antes de dirigir a esa ruta
-        dispatch(createMemeStartThunk({
-            text0: formValues.text0,
-            text1: formValues.text1,
-            template_id: id,
-        }));
-      };
+    
+    const cb = () => history.push("/my-list");
+
+    const handleCreateMeme = (id) => {
+        if(formValues.text0 !== "" && formValues.text1 !== "") {
+            // Se pone como argumento un callback con el history.push para que espere la respuesta de la api antes de dirigir a esa ruta
+            dispatch(createMemeStartThunk({
+                text0: formValues.text0,
+                text1: formValues.text1,
+                template_id: id,
+            }, cb));
+        } else {
+            return
+        }
+        setFormValues({
+            text0: "",
+            text1: ""
+        })
+    };
 
     return (
         isLoading === 'loading' ? (
@@ -61,7 +74,7 @@ const MemeCreate = () => {
                                     alt={meme?.name}
                                     src={meme?.url}
                                     title={meme?.name}
-                                    onClickCreate={() => hanldeCreateMeme(meme.id)}
+                                    onClickCreate={() => handleCreateMeme(meme.id)}
                                 />
                             ))
                         }

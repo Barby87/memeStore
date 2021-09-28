@@ -8,12 +8,12 @@ const NavBar = () => {
 
     return (
         <Menu mode="horizontal">
-            {!isLogin &&<Menu.Item key="item2">
+            {!isLogin &&<Menu.Item key="item1">
                 <NavLink to="/">
                     Login
                 </NavLink>
             </Menu.Item>}
-            {!isLogin && <Menu.Item key="itemitem2">
+            {!isLogin && <Menu.Item key="item2">
                 <NavLink to="/memes-list">
                     Lista de memes
                 </NavLink>
@@ -21,6 +21,11 @@ const NavBar = () => {
             {isLogin &&<Menu.Item key="item3">
                 <NavLink to="/meme/create">
                     Crear meme
+                </NavLink>
+            </Menu.Item>}
+            {isLogin &&<Menu.Item key="item4">
+                <NavLink to="/my-list">
+                    Mis memes
                 </NavLink>
             </Menu.Item>}
         </Menu>
